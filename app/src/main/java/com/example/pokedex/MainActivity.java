@@ -21,14 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
         initRecy();
 
+        for(int i = 0; i < 5; i++){
+            Pokemon pok = new Pokemon("Pokemon: " +i);
+            listaDatos.add(i, pok);
+        }
     }
 
     public void initRecy(){
 
-        for(int i = 0; i <= 50; i++){
-            Pokemon pok = new Pokemon("Pokemon: " +i);
-            listaDatos.add(pok);
-        }
+
         recycler = findViewById(R.id.recycler_id);
         recycler.setLayoutManager(new LinearLayoutManager(this));
 
